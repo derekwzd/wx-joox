@@ -1,0 +1,53 @@
+<view>
+    <video 
+        controls
+        autoplay="{{true}}"
+        danmu-btn="{{true}}"
+        enable-danmu="{{true}}"
+        src="{{src}}"
+        danmu-list="{{danmuList}}"
+        >
+    </video>
+    <view class="detail">
+        <view class="tabHome">
+            <view bindtap="switchTab" data-tab="0" class="tabItem ">
+                <view class="word {{(tab==0)? 'underline' : ''}}">Detail</view> 
+            </view>
+            <view bindtap="switchTab" data-tab="1" class="tabItem">
+                <view class="word {{(tab!=0)? 'underline' : ''}}">Comments</view> 
+            </view>
+        </view>
+        <block wx:if="{{tab==0}}">
+            <view class="title">
+                {{ videos[index].wording }}
+            </view>
+        </block>
+        <block wx:else>
+            <scroll-view 
+                scroll-y="true" 
+                class="commentsTable"
+                scroll-into-view="{{newIndex}}"
+                >
+                <view wx:for="{{comments}}" class="commentBlock" id="{{(index==newIndex) ? newIndex:''}}">
+                    <view class="name">
+                        {{item.name}}
+                    </view>
+                    <view class="content" >
+                        {{item.comment}}
+                    </view>
+                </view>
+            </scroll-view>
+            <footer>
+                <view class="inputBlock">
+                    <view class="inputborder">
+                        <input placeholder="说点什么" 
+                            bindinput="bindKeyInput"
+                            bindconfirm="submit"
+                        />
+                    </view>
+                    <!--<button bindtap="submit"></button>-->
+                </view>
+            </footer>
+        </block>
+    </view>
+</view>

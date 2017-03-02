@@ -1,0 +1,23 @@
+<view class="player">
+    <image id="bg" src="{{curplay.cover}}"></image>
+    <view id="title">
+        {{curplay.title}}
+    </view>
+    <view id="author">
+        {{curplay.author}}
+    </view>
+    <!--<view class= "animated {{animate}}">-->
+        <image id="cover" src="{{curplay.cover}}" class="{{(globalStop)?'':'spin'}}"></image>
+    <!--</view>-->
+    <view id="btns">
+        <view id="preBtn"  class="btn smallBtn" catchtap="playPreview">
+            <i class="fa fa-step-backward" aria-hidden="true"></i>
+        </view>
+        <view id="playBtn" class="btn" bindtap="homeBtn">
+            <i class="fa fa-{{(globalStop)? 'play': 'pause'}} fa-lg {{(globalStop)?'shift':''}}" aria-hidden="true"></i>
+        </view>
+        <view id="nextBtn" class="btn smallBtn" catchtap="playNext">
+            <i class="fa fa-step-forward" aria-hidden="true"></i>
+        </view>
+    </view>
+</view>

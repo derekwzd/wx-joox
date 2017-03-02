@@ -1,0 +1,104 @@
+.userinfo{
+    padding-top: 25rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    padding-bottom: 0rpx;
+    width         : 100%;
+    /*border-bottom : 1px solid rgba(255,255,255,0.2);*/
+}
+.avatar{
+    width : 60rpx;
+    height : 60rpx;
+    border-radius: 100%;
+}
+.username{
+    font-size: 30rpx;
+    inline-size: 30rpx;
+    border-left: 5rpx solid;
+    margin-left: 10rpx;
+    padding-left: 10rpx;
+}
+audio{
+    position: fixed;
+    bottom: 0;
+    width: 99%;
+    background: white;
+    left: 0rpx;
+    right : 0rpx;
+}
+
+.block{
+    width         : 100%;
+    margin        : 0 0 15rpx 0;
+    padding-bottom: 20rpx;
+}
+
+swiper{
+    display: block;
+    margin: 0;
+    width:100%;
+    text-align: center;
+    height: 220rpx;
+}
+.little{
+    margin-top: 10rpx;
+}
+swiper image{
+    height: 220rpx;
+    width: 100%;
+}
+
+.Story .story_title{
+    font-size: 30rpx;
+    border-left: 5rpx solid;
+    padding-left: 10rpx;
+}
+.Story .myTable{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-top: 20rpx;
+    /*border-bottom: 1px solid rgba(255,255,255,0.2);*/
+}
+
+.table-item{
+    display: block;
+    height: 250rpx;
+}
+.table-item .title{
+    font-size: 25rpx;
+    height: 65rpx;    
+    overflow: hidden;
+    text-overflow : ellipsis;
+}
+
+.table-item-2-col{
+    width: 350rpx;
+    margin: 0 0 50rpx 0;
+}
+.table-item-2-col image, video{
+    height: 220rpx;
+    width : 350rpx;
+    z-index: -1;
+}
+.table-item-2-col .background{
+    z-index:  -1;
+}
+
+
+.table-item-3-col{
+    width: 220rpx;
+    margin: 0 0 50rpx 0;
+}
+.table-item-3-col image{
+    height: 220rpx;
+    width : 220rpx;
+}
+
+
+.last{
+    padding-bottom: 30rpx;
+    margin-bottom: 30prx;
+}

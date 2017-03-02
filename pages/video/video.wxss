@@ -1,0 +1,75 @@
+video{
+    width: 750rpx;
+    height: 400rpx;
+    display: block;
+}
+
+.tabHome{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba( 0, 0, 0, 0.2);
+    height: 80rpx;
+}
+.tabHome .tabItem{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.word{
+    width : 200rpx;
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    font-size: 30rpx;
+}
+.underline{
+    border-radius: 300rpx;
+    background: rgba(255,255,255,0.15);
+    color:white;
+}
+.title{
+    padding: 20rpx;
+}
+.commentsTable{
+    height: 600rpx;
+    padding: 20rpx;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+}
+.commentBlock{
+   padding: 20rpx 10rpx 10rpx 10rpx;
+   border-bottom: 1px solid rgba(244,244,244, 0.4)
+}
+.commentBlock .name{
+    font-size: 25rpx;
+    color: rgba(200, 200, 200, 1)
+}
+.commentBlock .content{
+    font-size: 25rpx;
+}
+
+.inputBlock{
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    height: 60rpx;
+    width: 710rpx;
+    margin-left: 20rpx;
+    margin-bottom: 10rpx;
+}
+
+.inputBlock input{
+    width: 700rpx;
+}
+.inputBlock .inputborder{
+    border: 1px solid rgba(255,255,255, 0.7);
+    padding-left: 20rpx;
+    border-radius: 200rpx;
+}
+.inputBlock button{
+    margin-left: 20rpx;
+    border-radius: 400rpx;
+    height: 50rpx;
+    width: 20rpx;
+}

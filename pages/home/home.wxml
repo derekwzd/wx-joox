@@ -1,0 +1,66 @@
+<scroll-view scroll-y="true" style="height: 100%">
+    <view class="container">
+        <view class="block">
+            <view class="userinfo">
+                <image class="avatar" src="{{userInfo.avatarUrl}}"/>
+                <view class="username">{{userInfo.nickName}}</view>
+            </view>
+        </view>
+        <view class="block">
+            <view class="Story">
+                <view class="story_title" > Editor's Pick </view>
+                <view class="myTable">
+                    <view wx:for="{{editor_pick}}" wx:for-item="item_data" >
+                        <view id="{{index}}" bindtap="goAlbum">
+                            <template is="table_item_3_col"  data="{{...item_data}}"/>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="block">
+            <swiper indicator-dots="{{true}}" circular="{{true}}"
+                autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
+                <block wx:for="{{imgUrls}}">
+                    <swiper-item>
+                    <image src="{{item}}" class="slide-image"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        
+        <view class="block last">
+            <view class="Story">
+                <view class="story_title little"> JOOX Videos </view>
+                <view class="myTable">
+                    <block wx:for="{{video}}">
+                        <template is="table_item_2_col" data="{{...item, index}}"/>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+
+<footer>
+    <import src="../bar_player/bar_player.wxml"/>
+    <template is="bar_player" data="{{curplay,globalStop, disc_offset}}"></template>
+</footer>
+
+<template name="table_item_3_col">
+  <view class="table-item table-item-3-col">
+    <image mode="scaleToFill" src="{{img}}"></image>
+    <view class="title">{{wording}}</view>
+  </view>
+</template>
+
+<template name="table_item_2_col">
+    <view class="table-item table-item-2-col">
+        <view class="video_box">
+            <view style="display:{{imgDisplay}}" bindtap="goVideo" id="play-{{index}}" class="cover">
+                <image src="{{img}}"></image>
+            </view>
+        </view>
+        <view class="title">{{wording}}</view>
+    </view>
+</template>

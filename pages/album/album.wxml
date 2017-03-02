@@ -1,0 +1,24 @@
+<scroll-view scroll-y="true" id="album">
+<!--<view id="album">-->
+    <image class="bg-img" src="{{info.img}}"></image>
+    <view class="inner">
+        <view class="album-name">{{info.wording}}</view>
+        <image class="in-img" src="{{info.img}}"></image>
+    </view>
+
+    <view wx:for="{{list}}"  id="album-list" >
+        <view class="album-list-item" data-id="{{item.songid}}" data-index="{{index}}" catchtap="playSong">
+            <view>
+                <view class="songname"> {{item.title}} </view>
+                <view class="artistname"> {{item.author}} </view>
+            </view>
+            <view class="share" catchtap="detail">...</view>
+        </view>
+    </view>
+<!--</view>-->
+</scroll-view>
+
+<footer>
+    <import src="../bar_player/bar_player.wxml"/>
+    <template is="bar_player" data="{{curplay,globalStop,disc_offset}}"></template>
+</footer>

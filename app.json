@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/video/video",
+    "pages/person/person",
+    "pages/album/album",
+    "pages/logs/logs",
+    "pages/player/player",
+    "pages/bar_player/bar_player"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "enablePullDownRefresh": false,
+    "navigationBarTitleText": "JOOX",
+    "backgroundColor": "#41586a"
+  },
+  "debug" : true
+}

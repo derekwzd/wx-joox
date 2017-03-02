@@ -1,0 +1,84 @@
+#bar_player #disc{
+  position: fixed;
+  /*left: -30rpx;*/
+  bottom : -30rpx;
+  z-index: 11;
+  display: flex;
+}
+
+#bar_player #disc #cover{
+    width: 100rpx;
+    height : 100rpx;
+    border: 35rpx #242424 solid;
+    border-radius: 100rpx;
+}
+
+#bar_player #disc #play{
+  position: fixed;
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 12;
+  left:33rpx;
+  bottom: 30rpx;
+}
+
+#bar_player #disc .cover-grey{
+  filter: grayscale(10);
+  -webkit-filter : grayscale(70); /* Chrome, Opera */
+  -moz-filter    : grayscale(70);
+  -ms-filter     : grayscale(70);
+      filter     : grayscale(70); 
+}
+
+#bar_player #panel{
+  display: flex;
+  align-items:center;
+  width: 750rpx;
+  height: 115rpx;
+  background-color: black;
+}
+
+#bar_player #panel #bg{
+  z-index: 0;
+  position: fixed;
+  width: 750rpx;
+  height: 105rpx;
+  -webkit-filter : blur(50px); /* Chrome, Opera */
+    -moz-filter  : blur(50px);
+    -ms-filter   : blur(50px);
+        filter   : blur(50px); 
+}
+
+#bar_player #panel #bg image{
+  width: 750rpx;
+  height: 105rpx;
+}
+
+#bar_player #panel #info{
+  width : 400rpx;
+  padding-left: 80px;
+  z-index: 10;
+}
+
+#bar_player #info #title{
+  width: 400rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+#bar_player #info #author{
+  font-size: 30rpx;
+  color: rgba(205,205,205,0.5);
+}
+
+#bar_player #panel #pause, #next{
+  width : 70rpx;
+  height :70rpx;
+  border-radius: 100rpx;
+  border : 2px white solid;
+  z-index: 10;
+  font-size: 0.7em;
+}
+#bar_player #panel #pause{
+  margin-left: 25rpx;
+}

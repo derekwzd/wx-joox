@@ -1,0 +1,32 @@
+<template name="bar_player">
+    <view id="bar_player">
+        <view id="disc" 
+            style="left:{{disc_offset}}" 
+            catchtap="homeBtn" 
+            >
+            <block wx:if="{{globalStop}}">
+                <image id="play" src="../../resources/icons/play.png"></image>
+                <!--<i class="fa fa-play fa-lg" aria-hidden="true"></i>-->
+            </block>
+            <image id="cover" class="{{(globalStop)?'cover-grey':'spin'}}" src="{{curplay.cover}}"></image>
+        </view>
+        <view id="panel" class="{{(globalStop)? 'animated bounceOutLeft' : 'animated bounceInLeft'}}">
+            <view id="bg"><image src="{{curplay.cover}}"></image></view>
+            <view id = "info" catchtap="goPlayer" >
+                <view id="title">{{curplay.title}}</view>
+                <view id="author">{{curplay.author}}</view>
+            </view>
+            <view class="btn" id="next" catchtap="playNext">
+                <i class="fa fa-step-forward fa-1x" aria-hidden="true"></i>
+            </view>
+            <view class="btn" id="pause" catchtap="pause">
+                <i class="fa fa-pause fa-1x" aria-hidden="true"></i>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!--未来可能用到的代码-->
+<!--catchtouchstart="touchstart"
+catchtouchend = "touchend"
+catchtouchmove="playShuffle"-->

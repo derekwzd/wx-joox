@@ -1,0 +1,61 @@
+@import "./resources/fontawesome/font-awesome.min.wxss";
+@import "./resources/fontawesome/fonts.wxss";
+@import "./resources/animate.wxss";
+
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei" ! important;
+}
+
+page{
+  font-family: "Microsoft YaHei" ! important;
+  background: url("http://res.music.wechat.com/joox/zh_my/image/bg.jpg") repeat-x fixed;
+  background-size: 20px 100%;
+  color :  rgba(255,255,255,0.9);
+  height: 100%;
+  width: 100%;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    z-index: 200;
+}
+
+@import "./pages/bar_player/bar_player.wxss";
+.spin_stop{
+    animation: 30s spin linear infinite;
+    -webkit-animation: 30s spin linear infinite;
+    animation-play-state: paused;
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state: paused;
+}
+.spin{
+    animation: 30s spin linear infinite;
+    -webkit-animation: 30s spin linear infinite;
+    animation-play-state: running;
+    -webkit-animation-play-state:running;
+}
+
+@keyframes spin {
+    to{
+        transform : rotate(1turn);
+        -webkit-transform: rotate(1turn)
+    }
+}
+
+.btn{
+    display: flex;
+    border-radius: 100%;
+    justify-content:center;
+    align-items: center;
+    background-color:rgba(255,255,255,0);
+    border: white 2px solid;
+}
